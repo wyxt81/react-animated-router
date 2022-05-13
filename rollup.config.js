@@ -33,8 +33,7 @@ function createConfig(env, module) {
     // for umd globals
     const globals = {
         react: 'React',
-        'react-dom': 'ReactDOM',
-        'prop-types': 'PropTypes'
+        'react-dom': 'ReactDOM'
     };
 
     return {

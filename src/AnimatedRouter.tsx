@@ -38,7 +38,7 @@ const isHistoryPush = (location, update) => {
     return lastLocation.isPush;
 };
 
-interface AnimatedRouterProps extends TransitionActions {
+export interface AnimatedRouterProps extends TransitionActions {
     className?: string;
     transitionKey?: string | number;
     timeout?: number;
@@ -165,7 +165,7 @@ const AnimatedRouter: React.FC<AnimatedRouterProps> = props => {
                 unmountOnExit={true}
                 timeout={timeout as any}
                 {...cssProps}>
-                <Routes location={location}>{children}</Routes>
+                <Routes>{children}</Routes>
             </CSSTransition>
         </TransitionGroup>
     );
